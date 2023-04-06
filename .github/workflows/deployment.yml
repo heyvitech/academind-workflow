@@ -1,6 +1,16 @@
 name: Deploy Project
 on: push
 jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint
+        run: npm lint
+
   test:
     runs-on: ubuntu-latest
     steps:
@@ -19,7 +29,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Install dependencies
         run: npm ci
-      - name: Build project
-        run: npm run build
-      - name: Deploy
+      - name: Build code
+        run: npm build
+      - name: Deploy code
         run: echo "Deploying..."
