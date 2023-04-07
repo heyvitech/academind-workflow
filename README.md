@@ -10,7 +10,8 @@ _This diagram is created by Academind_
    This folder contains all of your workflow files, so  you need to create one on your own!  
 
 2. Create TWO workflows.
-   - First workflow should contain lint, test and deploy steps. Feel free to divide them into three jobs. They should run after one another.
-   - Second workflow
+   - **First workflow** should contain `lint`, `test` and `deploy` steps. Feel free to divide them into three jobs if you'd like. They should run after one another.
+   - **Second workflow** 
    
 ## My Solution
+I started off creating the first workflow with three jobs, namely `lint`, `test` and `deploy`. I didn't think of creating the workflow in a single job, which in this case would make more sense.
